@@ -3,19 +3,10 @@
 % File: biblio.tex (lshort2e.tex)
 % $Id: biblio.tex 172 2008-09-25 05:26:50Z oetiker $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{\makeatletter
-\def\@makeschapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedleft
-    \normalfont
-    \interlinepenalty\@M
-    \Huge \bfseries  #1\par\nobreak
-    \vskip 40\p@
-  }
-\makeatother	}  
+\setLTRbibitems
 \begin{thebibliography}{99}
+\resetlatinfont
 \addcontentsline{toc}{chapter}{\bibname} 
-\Latin
 \bibitem{manual} Leslie Lamport.  \newblock \emph{{\LaTeX:} A Document
     Preparation System}.  \newblock Addison-Wesley, Reading,
   Massachusetts, second edition, 1994, ISBN~0-201-52983-1.

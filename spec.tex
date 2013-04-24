@@ -116,17 +116,7 @@
 \emph{label} استفاده کنید، هر فقره به طور خودکار شماره‌گذاری می‌شود. پارامتر بعد از  \verb|\begin{thebibliography}| مشخص می‌کند که چه مقدار فضا باید برای برچسب‌ها در نظر گرفته شود. در مثال زیر، 
 \verb|{99}| به لاتک می‌گوید که هیچ‌کدام از شماره‌های فقره‌ها گسترده‌تر از عدد \lr{99} نیست.
 
-{{\makeatletter
-\def\@makeschapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedright
-    \normalfont
-    \interlinepenalty\@M
-    \Huge \bfseries  #1\par\nobreak
-    \vskip 40\p@
-  }
-\makeatother	}  
-%\def\bibname{Bibliography}
+
 %\enlargethispage{2cm}
 \begin{example}
 Partl~\cite{pa} has 

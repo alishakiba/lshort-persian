@@ -9,7 +9,7 @@
 %save pageref an label
 \let\lsspageref\pageref
 \ProvidesPackage{lshort}
-%\RequirePackage[english,frenchb,german]{babel}
+
 \RequirePackage{mflogo}
 \RequirePackage{verbatim}
 %\RequirePackage{fancyhea}
@@ -30,16 +30,9 @@
 \RequirePackage{textcomp}
 \RequirePackage[onehalfspacing]{setspace}
 \RequirePackage{hyperref}
-%\NoHyper
+
 \hypersetup{colorlinks=true,linkcolor=red,citecolor=green,filecolor=magneta,urlcolor=cyan}
-%\RequirePackage[para*,perpage]{ednotes}
-%%Lets have two layer of footnotes
-%\SetFootnoteHook{\@RTLfalse}%--> must appear immediately before \DeclareNewFootnote 
-%\DeclareNewFootnote[para]{C}[fnsymbol]
-%\renewcommand{\extrafootnoterule}{}
-%\SelectFootnoteRule[0]{extra}
-%\let\Footnote=\footnoteC
-\newcommand{\Footnote}[1]{\LTRfootnote{#1}}
+
 
 % need some magic here to keep the original definition of rightarrow
 \newcommand{\org@Rightarrow}{}
@@ -292,7 +285,7 @@
   \ifodd\HyPsd@pageref{exa\theexacnt}\hspace*{0pt}\else\hspace*{-\outdent}\fi%
 %\fi
 \fi
-\makebox[\textwidth][r]{%
+\makebox[\textwidth][l]{%
 %\raisebox{-\height}[0pt][\totalheight]{%
   \begin{latin}\begin{minipage}[c]{0.5\outdent+0.46\textwidth-3mm}%
     \small\verbatiminput{\jobname.exa}
@@ -337,6 +330,7 @@
 \newcommand{\graphicsinlatex}{\cite{ursoswald} }
 \usepackage{xepersian}
 
+\@ifundefined{Footnote}{\let\Footnote\LTRfootnote}{}
 
 \newcommand{\romanindex}[1]{\index{\lr{#1}}}
 \newcommand\emp[1]{\lr{''}#1\lr{``}}
